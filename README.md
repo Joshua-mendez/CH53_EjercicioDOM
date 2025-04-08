@@ -18,6 +18,6 @@ git commit -m "mensaje"
 git push origin main
 
 ```
-Vista previa del index.html
+> Vista previa del index.html
 
 ![index](./images/Captura%20de%20pantalla%202025-04-08%20104034.png)
