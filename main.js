@@ -22,14 +22,14 @@ encabezado1.innerText = "Ejercicio DOM"// Modifica el texto que tiene la variabl
 encabezado1.innerHTML = "<em>Ejercicio</em> DOM";// Modifica el codigo del HTML añadiendo alguna etiqueta que nosotros creemos como el "<em>"
 encabezado2.innerText = "DOM Exercise";
 
-btnMostrar.addEventListener("click", function(event){
+btnMostrar.addEventListener("click", function(event){//Eventos en este caso con click con una funcion para realizar ciertas acciones que se muestran dentro de este
   event.preventDefault();// no hagas lo que haces por defecto
   
-  let element = document.createElement("li");
+  let element = document.createElement("li");//se crea una variable para crear en el documento una etiqueta li
   element.innerText="Another item";//<li>Another item</li>
   element.classList.add("list-group-item");//crea la lista con la clase para ponerla dentro del cuadro
 
-  let element2 = element.cloneNode(true);
+  let element2 = element.cloneNode(true);//se crea una variable con el valor de clonar a la variable element con todas sus especificaciones
 
   // Before: inserta el elemento antes de la lista
   lista.item(0).before(element);
