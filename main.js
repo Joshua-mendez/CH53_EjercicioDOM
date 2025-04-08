@@ -31,13 +31,29 @@ btnMostrar.addEventListener("click", function(event){//Eventos en este caso con 
 
   let element2 = element.cloneNode(true);//se crea una variable con el valor de clonar a la variable element con todas sus especificaciones
 
-  // Before: inserta el elemento antes de la lista
-  lista.item(0).before(element);
-  // Prepend: inserta el elemento dentro de la lista
-  lista.item(0).prepend(element2);
-  // Append: inserta el elemento dentro al final de la lista
-  lista.item(0).append(element);
-  //After: inserta el elemento fuera y despues de la lista
-  lista.item(0).after(element2);
+  // // Before: inserta el elemento antes de la lista
+  // lista.item(0).before(element);
+  // // Prepend: inserta el elemento dentro de la lista
+  // lista.item(0).prepend(element2);
+  // // Append: inserta el elemento dentro al final de la lista
+  // lista.item(0).append(element);
+  // //After: inserta el elemento fuera y despues de la lista
+  // lista.item(0).after(element2);
 
+  // //afterbegin inserta el elemento al principio de la lista
+  // lista.item(1).insertAdjacentElement("afterbegin", element);
+  // //beforeend inserta el elemento al final de la linea
+  // lista.item(1).insertAdjacentElement("beforeend", element2);
+
+     lista.item(1).insertAdjacentHTML(beforebegin,
+       `<li class="list-group-item active">Beforebegin item</li>`);// Lo mismo que le anterior solo que aqui podemos pegar la etiqueta tal cual solo que con " `` "
+
+       lista.item(1).insertAdjacentHTML(afterend,
+        `<li class="list-group-item active">afterend item</li>`);
+
+        lista.item(1).insertAdjacentHTML(afterbegin,
+          `<li class="list-group-item active">afterend item</li>`);
+
+          lista.item(1).insertAdjacentHTML(beforeend,
+            `<li class="list-group-item active">beforeend begin item</li>`);
 });
