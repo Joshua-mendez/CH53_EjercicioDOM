@@ -18,3 +18,6 @@ git commit -m "mensaje"
 git push origin main
 
 ```
+Vista previa del index.html
+
+![index](c:\Users\hipho\OneDrive\Imágenes\Capturas de pantalla\Captura de pantalla 2025-04-08 104034.png)
