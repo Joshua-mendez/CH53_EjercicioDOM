@@ -20,4 +20,4 @@ git push origin main
 ```
 Vista previa del index.html
 
-![index](c:\Users\hipho\OneDrive\Imágenes\Capturas de pantalla\Captura de pantalla 2025-04-08 104034.png)
+![index](./images/Captura%20de%20pantalla%202025-04-08%20104034.png)
