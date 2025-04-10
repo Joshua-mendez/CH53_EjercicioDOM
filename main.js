@@ -9,6 +9,10 @@ let otroElemento = document.querySelector("ul>li");//primer elemento dentro de "
 
 let otrosElementos = document.querySelectorAll("ul>li");// la variable toma el valor de todas las etiquetas de "li" dentro de "ul"
 
+let txtRFC = document.getElementById("txtRFC");
+let txtCurp = document.getElementById("txtCurp");
+let txtTelefono = document.getElementById("txtTelefono");
+
 console.log(otrosElementos.length);//muestra cuantos elementos hay de la variable otrosElementos(li)
 console.log("otro elemento", otroElemento);//muestra el primer elemento de la variable seleccionada
 
@@ -48,12 +52,30 @@ btnMostrar.addEventListener("click", function(event){//Eventos en este caso con 
      lista.item(1).insertAdjacentHTML(beforebegin,
        `<li class="list-group-item active">Beforebegin item</li>`);// Lo mismo que le anterior solo que aqui podemos pegar la etiqueta tal cual solo que con " `` "
 
-       lista.item(1).insertAdjacentHTML(afterend,
-        `<li class="list-group-item active">afterend item</li>`);
+    lista.item(1).insertAdjacentHTML(afterend,
+       `<li class="list-group-item active">afterend item</li>`);
 
-        lista.item(1).insertAdjacentHTML(afterbegin,
-          `<li class="list-group-item active">afterend item</li>`);
+    lista.item(1).insertAdjacentHTML(afterbegin,
+       `<li class="list-group-item active">afterend item</li>`);
 
-          lista.item(1).insertAdjacentHTML(beforeend,
-            `<li class="list-group-item active">beforeend begin item</li>`);
+    lista.item(1).insertAdjacentHTML(beforeend,
+       `<li class="list-group-item active">beforeend begin item</li>`);
+})//btnMostras
+
+window.addEventListener("load", function(event){// evento que se ejecuta cuanod se termina de cargar todos los elementos de la pagina
+
+  console.log("Se termino de cargar la pagina");
+});//load
+
+ function txtToUpper(event){
+  event.preventDefault();
+  event.target.value = event.target.value.trim().toUpperCase();
+ }
+
+txtRFC.addEventListener("blur", txtToUpper);//blur -> cuando se sale del campo
+txtCurp.addEventListener("blur", txtToUpper);
+
+txtRFC.addEventListener("blur", function(event){
+  event.preventDefault();
+  txtTelefono.value = txtTelefono.value.trim().slice(0,10);
 });
